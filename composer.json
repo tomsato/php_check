@@ -1,0 +1,13 @@
+{
+    "require-dev": {
+        "phpmd/phpmd": "*",
+        "squizlabs/php_codesniffer": "2.*"
+    },
+    "scripts": {
+        "test": [
+            "composer install",
+            "./vendor/bin/phpmd ./src/ text codesize,design,naming,unusedcode",
+            "./vendor/bin/phpcs --standard=PSR2 --colors ./src/"
+        ]
+    }
+}
